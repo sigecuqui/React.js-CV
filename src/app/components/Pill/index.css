@@ -4,23 +4,22 @@
 .least {
   border-radius: 15px;
   padding: 5px;
-  color: white;
 }
 
 .best {
-  background-color:#00802b;
+  background-color:green;
 }
 
 .good {
-  background-color:#00cc44;
+  background-color: yellow;
 }
 
 .less {
-  background-color: #33ff77;
+  background-color:orange;
 }
 
 .least {
-  background-color: #ccffdd;
+  background-color: red;
 }
 
 .grey {

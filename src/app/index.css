@@ -19,7 +19,7 @@ main {
 .rectangle {
   max-width: 1006px;
   height: 61px;
-  background: darkblue;
+  background:rgb(97, 218, 251);
   display: flex;
   justify-content: flex-end;
   align-items: center;
