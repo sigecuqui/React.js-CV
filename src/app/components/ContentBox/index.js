@@ -1,3 +1,5 @@
+import './index.css';
+
 function ContentBox({ children, title }) {
   return (
     <section className="second-cont-section">

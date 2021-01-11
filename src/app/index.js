@@ -1,18 +1,23 @@
 import "./index.css";
 import Pill from "./components/Pill";
 import ContentBox from "./components/ContentBox";
+import WorkExperience from "./content/third-container/WorkExperience";
+import Footer from "./content/footer";
+import Link from "./components/Link";
+import Select from "./components/Select";
+import List from "./components/List";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div className="rectangle">
-          <form action="" method="POST">
-            <select name="" id="">
-              <option>Lithuanian</option>
-              <option>English</option>
-            </select>
-          </form>
+          <Select
+            options={[
+              { value: "en", children: "English" },
+              { value: "lt", children: "Lietuvių" },
+            ]}
+          />
         </div>
         <article className="name-card">
           <section className="title">SIGITA GUOGAITĖ</section>
@@ -22,44 +27,43 @@ function App() {
 
       <main>
         <article className="first-container">
-          <section className="links-container">
-            <h2>LINKS</h2>
-            <div className="line">
-              <div className="line-on"></div>
-            </div>
-            <div className="link">
-              <img
-                className="link-img"
-                src="https://lightbulbgrip.com/wp-content/uploads/2018/11/linkedin-icon-png-transparent-background-13.png"
-              />
-              <a
-                href="https://www.linkedin.com/in/sigita-guogaite/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Linkedin/sigita-guogaite
-              </a>
-            </div>
-            <div className="link">
-              <img
-                className="link-img"
-                src="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-24.jpg"
-              />
-              <a
-                href="https://github.com/sigecuqui"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Github/sigecuqui
-              </a>
-            </div>
-          </section>
+          <ContentBox title="LINKS">
+            <List
+              listClass="list"
+              liElement={[
+                {
+                  children: (
+                    <Link
+                      classLink="link"
+                      image
+                      imgSrc="https://lightbulbgrip.com/wp-content/uploads/2018/11/linkedin-icon-png-transparent-background-13.png"
+                      imgAlt="linkedin-logo"
+                      link="https://www.linkedin.com/in/sigita-guogaite/"
+                      imgClass="link-img"
+                    >
+                      LINKEDIN/sigita-guogaite
+                    </Link>
+                  ),
+                },
+                {
+                  children: (
+                    <Link
+                      classLink="link"
+                      image
+                      imgSrc="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-24.jpg"
+                      imgAlt="behance-logo"
+                      link="https://github.com/sigecuqui"
+                      imgClass="link-img"
+                    >
+                      GITHUB/sigecuqui
+                    </Link>
+                  ),
+                },
+              ]}
+            />
+          </ContentBox>
 
-          <section className="about-container">
-            <h2>ABOUT ME</h2>
-            <div className="line">
-              <div className="line-on"></div>
-            </div>
+          <ContentBox title="ABOUT ME">
             <p>
               Web Development skills:
               <br />
@@ -70,143 +74,169 @@ function App() {
               <br />
               Now learning React.js.
             </p>
-          </section>
+          </ContentBox>
         </article>
 
         <article className="second-container">
-          <section className="second-cont-section">
-            <h2>EDUCATION</h2>
-            <div className="line">
-              <div className="line-on"></div>
+          <ContentBox title="EDUCATION">
+            <div>
+              <List
+                listClass="list"
+                liElement={[
+                  { children: "CODEACADEMY" },
+                  { children: "2020 - 2021" },
+                  { children: "Professional Diploma" },
+                  { children: "Full-Stack Web Development" },
+                ]}
+              />
+              <div className="line"></div>
+              <List
+                listClass="list"
+                liElement={[
+                  { children: "VYTAUTAS MAGNUS UNIVERSITY" },
+                  { children: "2012 - 2016" },
+                  { children: "Bachelor" },
+                  { children: "Public Communication" },
+                ]}
+              />
             </div>
-            <p>
-              CODE ACADEMY
-              <br />
-              2020-2021
-              <br />
-              Proffessional diploma
-              <br />
-              FULL-STACK WEB DEVELOPMENT
-            </p>
-            <div className="line"></div>
-            <p>
-              VYTAUTAS MAGNUS UNIVERSITY
-              <br />
-              2012-2016
-              <br />
-              Bachelor
-              <br />
-              PUBLIC COMMUNICATION
-            </p>
-          </section>
+          </ContentBox>
 
           <ContentBox title="PERSONAL SKILLS">
-            <Pill color="green">CREATIVITY</Pill>
-            <Pill color="yellow">TEAMWORK</Pill>
+            <Pill color="best">CREATIVITY</Pill>
+            <Pill color="best">TEAMWORK</Pill>
+            <Pill color="good">ORGANIZATION</Pill>
           </ContentBox>
 
           <ContentBox title="TECHNICAL SKILLS">
-            <Pill color="green">HTML/CSS</Pill>
-            <Pill color="yellow">JAVASCRIPT</Pill>
-            <Pill color="yellow">PHP</Pill>
-            <Pill color="orange">REACT.JS</Pill>
+            <Pill color="best">HTML/CSS</Pill>
+            <Pill color="good">JAVASCRIPT</Pill>
+            <Pill color="good">PHP</Pill>
+            <Pill color="less">REACT.JS</Pill>
           </ContentBox>
         </article>
 
-        <h2>WORK EXPERIENCE</h2>
-        <div className="line">
-          <div className="line-on"></div>
-        </div>
+        <ContentBox title="WORK EXPERIENCE">
         <article className="third-container">
-          <section className="border">
-            <div className="align-center">
-              <h4 className="position">JOB POSITION</h4>
-              <h5 className="position-info">Company</h5>
-              <h5 className="position-info">2019</h5>
-            </div>
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-            <br />
-            <ul>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-            </ul>
-          </section>
+      <section className="border">
+       <WorkExperience
+              jobPosition="DIGITAL MARKETING INTERN"
+              company="GV Group"
+              date="2019"
+            >
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+        <List
+                liElement={[
+                  { children: "MAGENTO TVS" },
+                  { children: "GOOGLE ADS" },
+                  { children: "GOOGLE ANALYTICS" },
+                  { children: "COPYWRITING" },
+                ]}
+              />
+      </WorkExperience>
+      </section>
 
-          <section className="border">
-            <div className="align-center">
-              <h4 className="position">JOB POSITION</h4>
-              <h5 className="position-info">Company</h5>
-              <h5 className="position-info">2019</h5>
-            </div>
+      <section className="border">
+       <WorkExperience
+              jobPosition="ADMIN"
+              company="Publishing House BRIEDIS"
+              date="2017-2019"
+            >
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+        <List
+                liElement={[
+                  { children: "OXID TVS" },
+                  { children: "GOOGLE ADS" },
+                  { children: "FACEBOOK BUSINESS" },
+                  { children: "ADOBE INDESIGN" },
+                  { children: "PROOFREADING" },
+                  { children: "DOCUMENTS SYSTEMIZATION" },
+                ]}
+              />
+      </WorkExperience>
+      </section>
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-            <br />
-            <ul>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-            </ul>
-          </section>
-
-          <section>
-            <div className="align-center">
-              <h4 className="position">JOB POSITION</h4>
-              <h5 className="position-info">Company</h5>
-              <h5 className="position-info">2019</h5>
-            </div>
-
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-            <br />
-            <ul>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-            </ul>
-          </section>
-        </article>
+      <section>
+       <WorkExperience
+              jobPosition="BOOKSTORE CONSULTANT"
+              company="ALG knygynai"
+              date="2016-2017"
+            >
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+        <List
+                liElement={[
+                  { children: "CLIENTS CONSULTATION" },
+                  { children: "BOOK MAINTENANCE" },
+                  { children: "INTEREST IN VARIOUS GENRES" }
+                ]}
+              />
+      </WorkExperience>
+      </section>
+    </article>
+        </ContentBox>
       </main>
 
-      <footer>
-        <article>
-          <section className="black-title">LOCATION</section>
-          Vilnius
-        </article>
-
-        <article>
-          <section className="black-title">CONTACT</section>
-          <a href="tel:+37061481120">+37061481120</a>
-          <br />
-          <a href="mailto: sigita.guogaite@gmail.com">
-            sigita.guogaite@gmail.com
-          </a>
-        </article>
-
-        <article>
-          <section className="black-title">SOCIAL</section>
-          <a
-            href="https://www.linkedin.com/in/sigita-guogaite/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Linkedin/sigita-guogaite
-          </a>
-          <br />
-          <a
-            href="https://www.facebook.com/sigita.guogaite"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Facebook/sigita-guogaite
-          </a>
-        </article>
+      <footer className="footer">
+        <Footer classLabel="black-title" title="LOCATION">
+          <List listClass="list" liElement={[{ children: "Vilnius" }]} />
+        </Footer>
+        <Footer classLabel="black-title" title="CONTACT">
+          <List
+            listClass="list"
+            liElement={[
+              {
+                children: (
+                  <Link classLink="link-footer" link="tel:+37061481120">
+                    +37061481120
+                  </Link>
+                ),
+              },
+              {
+                children: (
+                  <Link
+                    classLink="link-footer"
+                    link="mailto:sigita.guogaite@gmail.com">
+                    sigita.guogaite@gmail.com
+                  </Link>
+                ),
+              },
+            ]}
+          />
+        </Footer>
+        <Footer classLabel="black-title" title="SOCIAL">
+          <List
+            listClass="list"
+            liElement={[
+              {
+                children: (
+                  <Link
+                    classLink="link-footer"
+                    link="https://www.linkedin.com/in/sigita-guogaite/"
+                  >
+                    LINKEDIN/sigita-guogaite
+                  </Link>
+                ),
+              },
+              {
+                children: (
+                  <Link classLink="link-footer" link="https://github.com/sigecuqui">
+                    GITHUB/sigecuqui
+                  </Link>
+                ),
+              },
+            ]}
+          />
+        </Footer>
       </footer>
     </div>
   );

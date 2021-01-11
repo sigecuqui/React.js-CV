@@ -1,0 +1,25 @@
+.link, .link-footer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.link-footer {
+  justify-content: center;
+}
+
+.link:hover, .link-footer:hover {
+  color: gold;
+}
+
+.link-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.link-img:hover {
+  filter: opacity(50%);
+}

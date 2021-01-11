@@ -1,7 +1,7 @@
 import "./index.css";
 
 function Pill({ children, color }) {
-  const asignedColor = ["green", "yellow", "orange", "red"].includes(color)
+  const asignedColor = ["best", "good", "less", "least"].includes(color)
     ? color
     : "grey";
   return (

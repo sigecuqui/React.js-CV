@@ -1,0 +1,9 @@
+.select {
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 20px;
+    background-color:darkblue;
+    cursor: pointer;
+    color: white;
+  }

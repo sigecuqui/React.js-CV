@@ -1,20 +1,26 @@
-.green,
-.yellow,
-.orange {
+.best,
+.good,
+.less,
+.least {
   border-radius: 15px;
   padding: 5px;
+  color: white;
 }
 
-.green {
-  background-color: seagreen;
+.best {
+  background-color:#00802b;
 }
 
-.yellow {
-  background-color: yellow;
+.good {
+  background-color:#00cc44;
 }
 
-.orange {
-  background-color: orange;
+.less {
+  background-color: #33ff77;
+}
+
+.least {
+  background-color: #ccffdd;
 }
 
 .grey {

@@ -1,0 +1,20 @@
+.second-cont-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .line {
+    height: 1px;
+    background-color: silver;
+    position: relative;
+    margin: 10px 0;
+  }
+  
+  .line-on {
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 10px;
+    background-color:darkblue;
+    position: absolute;
+    width: 100px;
+  }
