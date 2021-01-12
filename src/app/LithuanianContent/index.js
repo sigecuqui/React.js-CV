@@ -21,13 +21,13 @@ function App() {
         </div>
         <article className="name-card">
           <section className="title">SIGITA GUOGAITĖ</section>
-          <section className="black-title">PROGRAMMER</section>
+          <section className="black-title">PROGRAMUOTOJA</section>
         </article>
       </header>
 
       <main>
         <article className="first-container">
-          <ContentBox title="LINKS">
+          <ContentBox title="NUORODOS">
             <List
               listClass="list"
               liElement={[
@@ -63,52 +63,51 @@ function App() {
             />
           </ContentBox>
 
-          <ContentBox title="ABOUT ME">
+          <ContentBox title="APIE MANE">
             <p>
-              Web Development skills:
+              Žiniatinklio programavimo įgūdžiai:
               <br />
-              Working on GITHUB; Server-side technologies (NodeJS, modern stack
-              (ES2015, Flexbox, CSS Modules); Latest web standards in HTML, CSS,
-              JavaScript; Develop front-end web applications that scale and
-              perform well on all devices; etc.
+              Darbas su GITHUB, Server-side technologijomis (NodeJS, modern stack
+              (ES2015, Flexbox, CSS Modules); naujausių žiniatinklio programavimo standartų žinios HTML, CSS,
+              JavaScript; Žiniatinklio aplikacijų programavimas pritaikant įvairiems prietaisams ir t. t.
               <br />
-              Now learning React.js.
+              Šiuo metu mokausi React.js karkaso.
             </p>
           </ContentBox>
         </article>
 
         <article className="second-container">
-          <ContentBox title="EDUCATION">
+          <ContentBox title="IŠSILAVINIMAS">
             <div>
               <List
                 listClass="list"
                 liElement={[
                   { children: "CODEACADEMY" },
                   { children: "2020 - 2021" },
-                  { children: "Professional Diploma" },
-                  { children: "Full-Stack Web Development" },
+                  { children: "Profesinis diplomas" },
+                  { children: "Full-Stack Žiniatinklio programavimas" },
                 ]}
               />
               <div className="line"></div>
               <List
                 listClass="list"
                 liElement={[
-                  { children: "VYTAUTAS MAGNUS UNIVERSITY" },
+                  { children: "VYTAUTO DIDŽIOJO UNIVERSITETAS" },
                   { children: "2012 - 2016" },
-                  { children: "Bachelor" },
-                  { children: "Public Communication" },
+                  { children: "Bakalauras" },
+                  { children: "Viešoji komunikacija" },
                 ]}
               />
             </div>
           </ContentBox>
 
-          <ContentBox title="PERSONAL SKILLS">
-            <Pill rate="best">CREATIVITY</Pill>
-            <Pill rate="best">TEAMWORK</Pill>
-            <Pill rate="good">ORGANIZATION</Pill>
+          <ContentBox title="ASMENINĖS SAVYBĖS">
+            <Pill rate="best">KŪRYBIŠKUMAS</Pill>
+            <Pill rate="best">DARBAS KOMANDOJE</Pill>
+            <Pill rate="good">ORGANIZUOTUMAS</Pill>
           </ContentBox>
 
-          <ContentBox title="TECHNICAL SKILLS">
+          <ContentBox title="TECHNINIAI ĮGŪDŽIAI">
             <Pill rate="best">HTML/CSS</Pill>
             <Pill rate="good">JAVASCRIPT</Pill>
             <Pill rate="good">PHP</Pill>
@@ -116,24 +115,24 @@ function App() {
           </ContentBox>
         </article>
 
-        <ContentBox title="WORK EXPERIENCE">
+        <ContentBox title="DARBO PATIRTIS">
           <article className="third-container">
             <section className="border">
               <WorkExperience
-                jobPosition="DIGITAL MARKETING INTERN"
+                jobPosition="SKAITMENINIO MARKETINGO PRAKTIKANTAS"
                 company="GV Group"
                 date="2019"
               >
                 <p>
-                  Working on MAGENTO TVS with SEO keywords, writing SEO texts;
-                  learning GOOGLE ADS and ANALYTICS.
+                  Darbas su MAGENTO turinio valdymo sistema naudojant SEO raktažodžius, SEO tekstų rašymas;
+                  mokymasis dirbti su GOOGLE ADS ir ANALYTICS, FACEBOOK BUSINESS.
                 </p>
                 <List
                   liElement={[
                     { children: "MAGENTO TVS" },
                     { children: "GOOGLE ADS" },
                     { children: "GOOGLE ANALYTICS" },
-                    { children: "COPYWRITING" },
+                    { children: "TEKSTŲ RAŠYMAS" },
                   ]}
                 />
               </WorkExperience>
@@ -141,14 +140,12 @@ function App() {
 
             <section className="border">
               <WorkExperience
-                jobPosition="ADMIN"
-                company="Publishing House BRIEDIS"
+                jobPosition="ADMINISTRATORĖ"
+                company="Leidykla BRIEDIS"
                 date="2017-2019"
               >
                 <p>
-                  Working on company's marketing strategies; doing proofreading
-                  on books templates; working with documents and other
-                  administration works.
+                  Įmonės marketingo strategijų vystymas; darbas su knygų šablonais, klaidų paieška, redagavimas; darbas su dokumentais ir kiti administraciniai darbai.
                 </p>
                 <List
                   liElement={[
@@ -156,8 +153,8 @@ function App() {
                     { children: "GOOGLE ADS" },
                     { children: "FACEBOOK BUSINESS" },
                     { children: "ADOBE INDESIGN" },
-                    { children: "PROOFREADING" },
-                    { children: "DOCUMENTS SYSTEMIZATION" },
+                    { children: "REDAGAVIMAS" },
+                    { children: "DOCUMENTŲ ADMINISTRAVIMAS" },
                   ]}
                 />
               </WorkExperience>
@@ -165,19 +162,19 @@ function App() {
 
             <section>
               <WorkExperience
-                jobPosition="BOOKSTORE CONSULTANT"
+                jobPosition="KNYGYNO KONSULTANTĖ"
                 company="ALG knygynai"
                 date="2016-2017"
               >
                 <p>
-                  Clients consultation in various genres of books: children,
-                  history, science, classic, etc.
+                  Klientų konsultavimas įvairiuose knygų žanruose: vaikų literatūros,
+                  istorijos, mokslo, klasikinės grožinės literatūros ir t. t.
                 </p>
                 <List
                   liElement={[
-                    { children: "CLIENTS CONSULTATION" },
-                    { children: "BOOK MAINTENANCE" },
-                    { children: "INTEREST IN VARIOUS GENRES" },
+                    { children: "KLIENTŲ KONSULTAVIMAS" },
+                    { children: "KNYGŲ PRIEŽIŪRA" },
+                    { children: "DOMĖJIMASIS ĮVAIRIAIS KNYGŲ ŽANRAIS" },
                   ]}
                 />
               </WorkExperience>
@@ -187,10 +184,10 @@ function App() {
       </main>
 
       <footer className="footer">
-        <Footer classLabel="black-title" title="LOCATION">
+        <Footer classLabel="black-title" title="VIETA">
           <List listClass="list" liElement={[{ children: "Vilnius" }]} />
         </Footer>
-        <Footer classLabel="black-title" title="CONTACT">
+        <Footer classLabel="black-title" title="KONTAKTAI">
           <List
             listClass="list"
             liElement={[
@@ -214,7 +211,7 @@ function App() {
             ]}
           />
         </Footer>
-        <Footer classLabel="black-title" title="SOCIAL">
+        <Footer classLabel="black-title" title="SOCIALINIAI TINKLAI">
           <List
             listClass="list"
             liElement={[
