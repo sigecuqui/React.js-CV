@@ -4,6 +4,7 @@
 .least {
   border-radius: 15px;
   padding: 5px;
+  color: white;
 }
 
 .best {
@@ -11,7 +12,7 @@
 }
 
 .good {
-  background-color: yellow;
+  background-color: gold;
 }
 
 .less {

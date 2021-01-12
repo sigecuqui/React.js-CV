@@ -126,8 +126,7 @@ function App() {
               date="2019"
             >
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Working on MAGENTO TVS with SEO keywords, writing SEO texts; learning GOOGLE ADS and ANALYTICS.
         </p>
         <List
                 liElement={[
@@ -147,8 +146,7 @@ function App() {
               date="2017-2019"
             >
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Working on company's marketing strategies; doing proofreading on books templates; working with documents and other administration works.
         </p>
         <List
                 liElement={[
@@ -170,8 +168,7 @@ function App() {
               date="2016-2017"
             >
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Clients consultation in various genres of books: children, history, science, classic, etc.
         </p>
         <List
                 liElement={[
