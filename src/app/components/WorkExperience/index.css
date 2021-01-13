@@ -1,28 +1,14 @@
 /*WORK EXPERIENCE */
 
-.third-container > section {
-    padding: 10px;
-  }
-  
-  ul {
-    padding: 15px;
-  }
-  
-  .position {
-    margin: 0 0 10px;
-    font-weight: normal;
-  }
-  
-  .position-info {
-    margin: 0 0 5px;
-    font-weight: lighter;
-  }
-  
-  .border {
-    border-right: 1px solid black;
-  }
-  
-  .job-position {
-    padding: 0;
-    margin: 0;
-  }
+.App__third-container > section {
+  padding: 10px;
+}
+
+.App__third-container--border {
+  border-right: 1px solid black;
+}
+
+.App__third-container--job-position {
+  padding: 0;
+  margin: 0;
+}

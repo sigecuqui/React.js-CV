@@ -2,6 +2,10 @@ main {
   margin: 0 auto;
 }
 
+.align-center {
+  text-align: center;
+}
+
 .App {
   width: 1006px;
   /* height: 1384px; */
@@ -10,13 +14,13 @@ main {
   margin: 0 auto;
 }
 
-.App-header {
+.App__header {
   width: 100%;
   margin: 0 auto;
   padding-bottom: 200px;
 }
 
-.rectangle {
+.App__header--rectangle {
   max-width: 1006px;
   height: 61px;
   background:rgb(97, 218, 251);
@@ -25,7 +29,7 @@ main {
   align-items: center;
 }
 
-.name-card {
+.App__header--name-card {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -41,7 +45,7 @@ main {
   align-items: center;
 }
 
-.title {
+.App__header--title {
   width: 359px;
   height: 56px;
   font-weight: bold;
@@ -61,7 +65,7 @@ main {
 }
 
 
-.first-container {
+.App__first-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 10px;
@@ -70,16 +74,12 @@ main {
 }
 
 
-.second-container,
-.third-container,
-footer {
+.App__second-container,
+.App__third-container,
+.App__footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 10px;
   margin: 20px 0;
-}
-
-.align-center {
-  text-align: center;
 }

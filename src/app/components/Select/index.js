@@ -2,7 +2,7 @@ import './index.css';
 
 function Select({ options = [] }) {
     return (
-      <select className="select">
+      <select className="App__select">
         {options.map((optionData) => (
           <option key={optionData.value} {...optionData} />
         ))}

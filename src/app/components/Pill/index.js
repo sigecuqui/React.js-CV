@@ -3,7 +3,7 @@ import "./index.css";
 function Pill({ children, rate }) {
   const asignedRate = ["best", "good", "less", "least"].includes(rate)
     ? rate
-    : "grey";
+    : "none";
   return (
     <h3>
       <span className={asignedRate}>{children}</span>

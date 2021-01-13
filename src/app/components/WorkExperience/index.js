@@ -4,7 +4,7 @@ function WorkExperience({ jobPosition, company, date, children }) {
   return (
     <section>
       <div className="align-center">
-        <h4 className="job-position">{jobPosition}</h4>
+        <h4 className="App__third-container--job-position">{jobPosition}</h4>
         <br />
         {company}
         <br />

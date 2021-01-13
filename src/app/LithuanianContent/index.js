@@ -193,7 +193,7 @@ function App() {
             liElement={[
               {
                 children: (
-                  <Link classLink="link-footer" link="tel:+37061481120">
+                  <Link classLink="App__footer--link" link="tel:+37061481120">
                     +37061481120
                   </Link>
                 ),
@@ -201,7 +201,7 @@ function App() {
               {
                 children: (
                   <Link
-                    classLink="link-footer"
+                    classLink="App__footer--link"
                     link="mailto:sigita.guogaite@gmail.com"
                   >
                     sigita.guogaite@gmail.com
@@ -218,7 +218,7 @@ function App() {
               {
                 children: (
                   <Link
-                    classLink="link-footer"
+                    classLink="App__footer--link"
                     link="https://www.linkedin.com/in/sigita-guogaite/"
                   >
                     LINKEDIN/sigita-guogaite
@@ -228,7 +228,7 @@ function App() {
               {
                 children: (
                   <Link
-                    classLink="link-footer"
+                    classLink="App__footer--link"
                     link="https://github.com/sigecuqui"
                   >
                     GITHUB/sigecuqui
