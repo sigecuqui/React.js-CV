@@ -1,13 +1,20 @@
-import './index.css';
+import SelectBox from "../SelectBox";
+import "./index.css";
 
-function Select({ options = [] }) {
-    return (
-      <select className="App__select">
-        {options.map((optionData) => (
-          <option key={optionData.value} {...optionData} />
-        ))}
-      </select>
-    );
-  }
-  
-  export default Select;
+function Select() {
+  const onSelect = (event) => {
+    console.log(event.target.value);
+  };
+
+  return (
+    <SelectBox
+      onChange={onSelect}
+      options={[
+        { value: "en", children: "English" },
+        { value: "lt", children: "Lietuvių" },
+      ]}
+    />
+  );
+}
+
+export default Select;

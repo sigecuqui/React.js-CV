@@ -12,12 +12,7 @@ function App() {
     <div className="App">
       <header className="App__header">
         <div className="App__header--rectangle">
-          <Select
-            options={[
-              { value: "en", children: "English" },
-              { value: "lt", children: "Lietuvių" },
-            ]}
-          />
+          <Select></Select>
         </div>
         <article className="App__header--name-card">
           <section className="App__header--title">SIGITA GUOGAITĖ</section>
