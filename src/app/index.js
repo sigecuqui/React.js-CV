@@ -21,7 +21,7 @@ function App() {
         </div>
         <article className="App__header--name-card">
           <section className="App__header--title">SIGITA GUOGAITĖ</section>
-          <section className="black-title">PROGRAMMER</section>
+          <section className="App__black-title">PROGRAMMER</section>
         </article>
       </header>
 
@@ -89,7 +89,7 @@ function App() {
                   { children: "Full-Stack Web Development" },
                 ]}
               />
-              <div className="line"></div>
+              <div className="App__line"></div>
               <List
                 listClass="App__list"
                 liElement={[

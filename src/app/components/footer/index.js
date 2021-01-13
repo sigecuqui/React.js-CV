@@ -6,10 +6,10 @@ import FooterBlock from "../FooterBlock";
 function Footer() {
   return (
     <footer className="App__footer">
-      <FooterBlock classLabel="black-title" title="LOCATION">
+      <FooterBlock classLabel="App__black-title" title="LOCATION">
         <List listClass="App__list" liElement={[{ children: "Vilnius" }]} />
       </FooterBlock>
-      <FooterBlock classLabel="black-title" title="CONTACT">
+      <FooterBlock classLabel="App__black-title" title="CONTACT">
         <List
           listClass="App__list"
           liElement={[
@@ -33,7 +33,7 @@ function Footer() {
           ]}
         />
       </FooterBlock>
-      <FooterBlock classLabel="black-title" title="SOCIAL">
+      <FooterBlock classLabel="App__black-title" title="SOCIAL">
         <List
           listClass="App__list"
           liElement={[

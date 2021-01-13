@@ -2,10 +2,10 @@ import './index.css';
 
 function ContentBox({ children, title }) {
   return (
-    <section className="second-cont-section">
+    <section className="App__second-container--section">
       <h2>{title}</h2>
-      <div className="line">
-        <div className="line-on"></div>
+      <div className="App__line">
+        <div className="App__line--on"></div>
       </div>
       {children}
     </section>

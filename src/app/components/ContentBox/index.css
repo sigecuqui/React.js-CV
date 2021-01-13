@@ -1,16 +1,16 @@
-.second-cont-section {
+.App__second-container--section {
     display: flex;
     flex-direction: column;
   }
 
-  .line {
+  .App__line {
     height: 1px;
     background-color: silver;
     position: relative;
     margin: 10px 0;
   }
   
-  .line-on {
+  .App__line--on {
     top: 50%;
     transform: translate(0, -50%);
     height: 10px;

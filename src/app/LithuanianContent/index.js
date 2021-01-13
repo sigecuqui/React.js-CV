@@ -10,8 +10,8 @@ import List from "./components/List";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="rectangle">
+      <header className="App__header">
+        <div className="App__header--rectangle">
           <Select
             options={[
               { value: "en", children: "English" },
@@ -19,27 +19,27 @@ function App() {
             ]}
           />
         </div>
-        <article className="name-card">
-          <section className="title">SIGITA GUOGAITĖ</section>
-          <section className="black-title">PROGRAMUOTOJA</section>
+        <article className="App__header--name-card">
+          <section className="App__header--title">SIGITA GUOGAITĖ</section>
+          <section className="App__black-title">PROGRAMUOTOJA</section>
         </article>
       </header>
 
       <main>
-        <article className="first-container">
+        <article className="App__first-container">
           <ContentBox title="NUORODOS">
             <List
-              listClass="list"
+              listClass="App__list"
               liElement={[
                 {
                   children: (
                     <Link
-                      classLink="link"
+                      classLink="App__link"
                       image
                       imgSrc="https://lightbulbgrip.com/wp-content/uploads/2018/11/linkedin-icon-png-transparent-background-13.png"
                       imgAlt="linkedin-logo"
                       link="https://www.linkedin.com/in/sigita-guogaite/"
-                      imgClass="link-img"
+                      imgClass="App__link--img"
                     >
                       LINKEDIN/sigita-guogaite
                     </Link>
@@ -48,12 +48,12 @@ function App() {
                 {
                   children: (
                     <Link
-                      classLink="link"
+                      classLink="App__link"
                       image
                       imgSrc="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-24.jpg"
-                      imgAlt="behance-logo"
+                      imgAlt="github-logo"
                       link="https://github.com/sigecuqui"
-                      imgClass="link-img"
+                      imgClass="App__link--img"
                     >
                       GITHUB/sigecuqui
                     </Link>
@@ -76,11 +76,11 @@ function App() {
           </ContentBox>
         </article>
 
-        <article className="second-container">
+        <article className="App__second-container">
           <ContentBox title="IŠSILAVINIMAS">
             <div>
               <List
-                listClass="list"
+                listClass="App__list"
                 liElement={[
                   { children: "CODEACADEMY" },
                   { children: "2020 - 2021" },
@@ -88,9 +88,9 @@ function App() {
                   { children: "Full-Stack Žiniatinklio programavimas" },
                 ]}
               />
-              <div className="line"></div>
+              <div className="App__line"></div>
               <List
-                listClass="list"
+                listClass="App__list"
                 liElement={[
                   { children: "VYTAUTO DIDŽIOJO UNIVERSITETAS" },
                   { children: "2012 - 2016" },
@@ -116,8 +116,8 @@ function App() {
         </article>
 
         <ContentBox title="DARBO PATIRTIS">
-          <article className="third-container">
-            <section className="border">
+          <article className="App__third-container">
+            <section className="App__third-container--border">
               <WorkExperience
                 jobPosition="SKAITMENINIO MARKETINGO PRAKTIKANTAS"
                 company="GV Group"
@@ -138,7 +138,7 @@ function App() {
               </WorkExperience>
             </section>
 
-            <section className="border">
+            <section className="App__third-container--border">
               <WorkExperience
                 jobPosition="ADMINISTRATORĖ"
                 company="Leidykla BRIEDIS"
@@ -183,13 +183,13 @@ function App() {
         </ContentBox>
       </main>
 
-      <footer className="footer">
-        <Footer classLabel="black-title" title="VIETA">
-          <List listClass="list" liElement={[{ children: "Vilnius" }]} />
+      <footer className="App__footer">
+        <Footer classLabel="App__black-title" title="VIETA">
+          <List listClass="App__list" liElement={[{ children: "Vilnius" }]} />
         </Footer>
-        <Footer classLabel="black-title" title="KONTAKTAI">
+        <Footer classLabel="App__black-title" title="KONTAKTAI">
           <List
-            listClass="list"
+            listClass="App__list"
             liElement={[
               {
                 children: (
@@ -211,9 +211,9 @@ function App() {
             ]}
           />
         </Footer>
-        <Footer classLabel="black-title" title="SOCIALINIAI TINKLAI">
+        <Footer classLabel="App__black-title" title="SOCIALINIAI TINKLAI">
           <List
-            listClass="list"
+            listClass="App__list"
             liElement={[
               {
                 children: (
