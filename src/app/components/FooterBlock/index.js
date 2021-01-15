@@ -1,7 +1,5 @@
-import "./index.css";
-
-function FooterBlock({title, children, classLabel = ""}) {
-  return (
+function FooterBlock({ title, classLabel = "", children}) {
+ return (
     <section>
       <div className={classLabel}>{title}</div>
       {children}

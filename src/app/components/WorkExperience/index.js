@@ -2,7 +2,7 @@ import "./index.css";
 
 function WorkExperience({ jobPosition, company, date, children }) {
   return (
-    <section>
+    <section className="App__third-container--border">
       <div className="align-center">
         <h4 className="App__third-container--job-position">{jobPosition}</h4>
         <br />

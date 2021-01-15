@@ -1,28 +1,21 @@
+import { Fragment, useState } from "react";
 import "./index.css";
+import Layout from "./components/Layout";
 import Pill from "./components/Pill";
 import ContentBox from "./components/ContentBox";
-import WorkExperience from "./components/WorkExperience";
-import Footer from "./components/Footer";
-import Link from "./components/Link";
-import Select from "./components/Select";
 import List from "./components/List";
+import Link from "./components/Link";
+import WorkExperience from "./components/WorkExperience";
+import translate from "./translate";
 
 function App() {
+  const [lang, setLang] = useState("en");
+
   return (
     <div className="App">
-      <header className="App__header">
-        <div className="App__header--rectangle">
-          <Select></Select>
-        </div>
-        <article className="App__header--name-card">
-          <section className="App__header--title">SIGITA GUOGAITĖ</section>
-          <section className="App__black-title">PROGRAMMER</section>
-        </article>
-      </header>
-
-      <main>
+      <Layout language={lang} setLanguage={setLang}>
         <article className="App__first-container">
-          <ContentBox title="LINKS">
+          <ContentBox title={translate[lang].main.links.title}>
             <List
               listClass="App__list"
               liElement={[
@@ -30,7 +23,6 @@ function App() {
                   children: (
                     <Link
                       classLink="App__link"
-                      image
                       imgSrc="https://lightbulbgrip.com/wp-content/uploads/2018/11/linkedin-icon-png-transparent-background-13.png"
                       imgAlt="linkedin-logo"
                       link="https://www.linkedin.com/in/sigita-guogaite/"
@@ -44,7 +36,6 @@ function App() {
                   children: (
                     <Link
                       classLink="App__link"
-                      image
                       imgSrc="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-24.jpg"
                       imgAlt="github-logo"
                       link="https://github.com/sigecuqui"
@@ -58,130 +49,76 @@ function App() {
             />
           </ContentBox>
 
-          <ContentBox title="ABOUT ME">
-            <p>
-              Web Development skills:
-              <br />
-              Working on GITHUB; Server-side technologies (NodeJS, modern stack
-              (ES2015, Flexbox, CSS Modules); Latest web standards in HTML, CSS,
-              JavaScript; Develop front-end web applications that scale and
-              perform well on all devices; etc.
-              <br />
-              Now learning React.js.
-            </p>
+          <ContentBox title={translate[lang].main.about.title}>
+            <p>{translate[lang].main.about.text}</p>
           </ContentBox>
         </article>
 
         <article className="App__second-container">
-          <ContentBox title="EDUCATION">
-            <div>
-              <List
-                listClass="App__list"
-                liElement={[
-                  { children: "CODEACADEMY" },
-                  { children: "2020 - 2021" },
-                  { children: "Professional Diploma" },
-                  { children: "Full-Stack Web Development" },
-                ]}
-              />
-              <div className="App__line"></div>
-              <List
-                listClass="App__list"
-                liElement={[
-                  { children: "VYTAUTAS MAGNUS UNIVERSITY" },
-                  { children: "2012 - 2016" },
-                  { children: "Bachelor" },
-                  { children: "Public Communication" },
-                ]}
-              />
-            </div>
+          <ContentBox title={translate[lang].main.education.title}>
+            {translate[lang].main.education.educationContent.map(
+              (list, index) => (
+                <Fragment key={index}>
+                  <List
+                    listClass="App__list"
+                    liElement={list.map((children) => ({ children }))}
+                  />
+                  <div className="App__line"></div>
+                </Fragment>
+              )
+            )}
           </ContentBox>
 
-          <ContentBox title="PERSONAL SKILLS">
-            <Pill rate="best">CREATIVITY</Pill>
-            <Pill rate="best">TEAMWORK</Pill>
-            <Pill rate="good">ORGANIZATION</Pill>
+          <ContentBox title={translate[lang].main.personalSkills.title}>
+            <List
+              listClass="App__list"
+              liElement={translate[lang].main.personalSkills.skills.map(
+                ({ text, rate, index }) => ({
+                  children: (
+                    <Pill key={index} rate={rate}>
+                      {text}
+                    </Pill>
+                  ),
+                })
+              )}
+            />
           </ContentBox>
-
-          <ContentBox title="TECHNICAL SKILLS">
-            <Pill rate="best">HTML/CSS</Pill>
-            <Pill rate="good">JAVASCRIPT</Pill>
-            <Pill rate="good">PHP</Pill>
-            <Pill rate="less">REACT.JS</Pill>
+          <ContentBox title={translate[lang].main.technicalSkills.title}>
+            <List
+              listClass="App__list"
+              liElement={translate[lang].main.technicalSkills.skills.map(
+                ({ text, rate, index }) => ({
+                  children: (
+                    <Pill key={index} rate={rate}>
+                      {text}
+                    </Pill>
+                  ),
+                })
+              )}
+            />
           </ContentBox>
         </article>
 
-        <ContentBox title="WORK EXPERIENCE">
+        <ContentBox title={translate[lang].main.workExperience.title}>
           <article className="App__third-container">
-            <section className="App__third-container--border">
-              <WorkExperience
-                jobPosition="DIGITAL MARKETING INTERN"
-                company="GV Group"
-                date="2019"
-              >
-                <p>
-                  Working on MAGENTO TVS with SEO keywords, writing SEO texts;
-                  learning GOOGLE ADS and ANALYTICS.
-                </p>
-                <List
-                  liElement={[
-                    { children: "MAGENTO TVS" },
-                    { children: "GOOGLE ADS" },
-                    { children: "GOOGLE ANALYTICS" },
-                    { children: "COPYWRITING" },
-                  ]}
-                />
-              </WorkExperience>
-            </section>
-
-            <section className="App__third-container--border">
-              <WorkExperience
-                jobPosition="ADMIN"
-                company="Publishing House BRIEDIS"
-                date="2017-2019"
-              >
-                <p>
-                  Working on company's marketing strategies; doing proofreading
-                  on books templates; working with documents and other
-                  administration works.
-                </p>
-                <List
-                  liElement={[
-                    { children: "OXID TVS" },
-                    { children: "GOOGLE ADS" },
-                    { children: "FACEBOOK BUSINESS" },
-                    { children: "ADOBE INDESIGN" },
-                    { children: "PROOFREADING" },
-                    { children: "DOCUMENTS SYSTEMIZATION" },
-                  ]}
-                />
-              </WorkExperience>
-            </section>
-
-            <section>
-              <WorkExperience
-                jobPosition="BOOKSTORE CONSULTANT"
-                company="ALG knygynai"
-                date="2016-2017"
-              >
-                <p>
-                  Clients consultation in various genres of books: children,
-                  history, science, classic, etc.
-                </p>
-                <List
-                  liElement={[
-                    { children: "CLIENTS CONSULTATION" },
-                    { children: "BOOK MAINTENANCE" },
-                    { children: "INTEREST IN VARIOUS GENRES" },
-                  ]}
-                />
-              </WorkExperience>
-            </section>
+              {translate[lang].main.workExperience.work.map(
+                ({ position, company, date, text, skills }, index) => (
+                  <WorkExperience
+                    key={index}
+                    jobPosition={position}
+                    company={company}
+                    date={date}
+                  >
+                    <p>{text}</p>
+                    <List
+                      liElement={skills.map((children) => ({ children }))}
+                    />
+                  </WorkExperience>
+                )
+              )}
           </article>
         </ContentBox>
-      </main>
-
-      <Footer></Footer>
+      </Layout>
     </div>
   );
 }

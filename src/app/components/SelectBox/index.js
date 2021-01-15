@@ -1,8 +1,8 @@
 import './index.css';
 
-function SelectBox({ options = [] }) {
+function SelectBox({ options = [], onChange }) {
     return (
-      <select className="App__select">
+      <select className="App__select" onChange = {onChange}>
         {options.map((optionData) => (
           <option key={optionData.value} {...optionData} />
         ))}

@@ -1,7 +1,6 @@
 import "./index.css";
 
 function Link({
-  image,
   link,
   classLink = "",
   imgSrc = "",
@@ -11,7 +10,7 @@ function Link({
 }) {
   return (
     <a href={link} className={classLink} target="_blank" rel="noreferrer">
-      {image && <img src={imgSrc} alt={imgAlt} className={imgClass} />}
+      {imgSrc && <img src={imgSrc} alt={imgAlt} className={imgClass} />}
       {children}
     </a>
   );

@@ -2,64 +2,34 @@ import "./index.css";
 import Link from "../Link";
 import List from "../List";
 import FooterBlock from "../FooterBlock";
+import translate from "../../translate";
 
-function Footer() {
+function Footer({ lang }) {
   return (
     <footer className="App__footer">
-      <FooterBlock classLabel="App__black-title" title="LOCATION">
-        <List listClass="App__list" liElement={[{ children: "Vilnius" }]} />
-      </FooterBlock>
-      <FooterBlock classLabel="App__black-title" title="CONTACT">
-        <List
-          listClass="App__list"
-          liElement={[
-            {
-              children: (
-                <Link classLink="App__footer--link" link="tel:+37061481120">
-                  +37061481120
-                </Link>
-              ),
-            },
-            {
-              children: (
-                <Link
-                  classLink="App__footer--link"
-                  link="mailto:sigita.guogaite@gmail.com"
-                >
-                  sigita.guogaite@gmail.com
-                </Link>
-              ),
-            },
-          ]}
-        />
-      </FooterBlock>
-      <FooterBlock classLabel="App__black-title" title="SOCIAL">
-        <List
-          listClass="App__list"
-          liElement={[
-            {
-              children: (
-                <Link
-                  classLink="App__footer--link"
-                  link="https://www.linkedin.com/in/sigita-guogaite/"
-                >
-                  LINKEDIN/sigita-guogaite
-                </Link>
-              ),
-            },
-            {
-              children: (
-                <Link
-                  classLink="App__footer--link"
-                  link="https://github.com/sigecuqui"
-                >
-                  GITHUB/sigecuqui
-                </Link>
-              ),
-            },
-          ]}
-        />
-      </FooterBlock>
+      {translate[lang].footer.footerContent.map((item, index) => (
+        <FooterBlock
+          classLabel="App__black-title"
+          key={index}
+          title={item.title}
+        >
+          <List
+            listClass="App__list"
+            liElement={item.list.map(({ text, link, index }) => {
+              const Component = link ? Link : "p";
+
+              return {
+                children: (
+                  <Component key={index} link={link}
+                  classLink="App__footer--link">
+                    {text}
+                  </Component>
+                ),
+              };
+            })}
+          />
+        </FooterBlock>
+      ))}
     </footer>
   );
 }

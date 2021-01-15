@@ -1,0 +1,40 @@
+/* HEADER */
+
+.App__header {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 200px;
+  }
+  
+  .App__header--rectangle {
+    max-width: 1006px;
+    height: 61px;
+    background:rgb(97, 218, 251);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .App__header--name-card {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 586px;
+    height: 189px;
+    border: 4px solid #000000;
+    box-sizing: border-box;
+    margin-top: -20px;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .App__header--title {
+    width: 359px;
+    height: 56px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000000;
+  }
